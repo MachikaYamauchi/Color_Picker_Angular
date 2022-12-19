@@ -1,0 +1,20 @@
+<section>
+  <div class="color-picker">
+    <div class="summary-info" [ngStyle]="{ background: color }">
+      <div class="info">
+        <p class="style-value">{{ color }}</p>
+      </div>
+      <!-- <div class="circle" [ngStyle]="{ background: color }"></div> -->
+    </div>
+    <div class="opened">
+      <div class="colors">
+        <div
+          (click)="changeColor(paint)"
+          *ngFor="let paint of defaultColors"
+          class="circle"
+          [ngStyle]="{ background: paint }"
+        ></div>
+      </div>
+    </div>
+  </div>
+</section>
